@@ -14,19 +14,19 @@
               {{ if .HasChildren }}
                 <!-- Dropdown-->
                 <li class="tab{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
-                    <a data-toggle="collapse" href="#{{.Identifier}}-sub">{{ .Pre }} {{ .Name }} <span class="caret" ></span></a>
+                    <a data-toggle="collapse" href="#{{.Identifier}}">{{ .Pre }} {{ .Name }} <span class="caret" ></span></a>
                     <!-- Dropdown level 1 -->
                     <ul class="tabs vertical" data-tab>
                         {{ range .Children }}
                         {{if .HasChildren}} 
                         	<li class="tab{{if $currentNode.HasMenuCurrent .Identifier . }} active{{end}}">
-								<a data-toggle="collapse" href="#{{.Identifier}}-sub">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>	
+								<a data-toggle="collapse" href="#{{.Identifier}}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>	
 								<!-- Dropdown level 2 -->		
 								<ul class="tabs vertical" data-tab>
 								{{ range .Children }}
 								{{if .HasChildren}} 
 									<li class="tab{{if $currentNode.HasMenuCurrent .Identifier . }} active{{end}}">
-											<a data-toggle="collapse" href="#{{.Identifier}}-sub">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>	
+											<a data-toggle="collapse" href="#{{.Identifier}}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>	
 											<!-- Dropdown level 3 -->		
 											<ul class="tabs vertical" data-tab>
 													{{ range .Children }}

@@ -2,13 +2,16 @@
 {{ partial "navbar.html" . }}
 
     <div class="container">
-
-        {{ range where .Data.Pages "Title" "Home" }}
-                    <p>{{ .Content }}</p>
+        {{ range .Data.Pages }}
+        <section id="smn_{{ .Params.id }}">
+            <h3 class="title">{{ .Title }}</h3>
+            <article>
+                {{ .Content }}
+            </article>
+        </section>
         {{ end }}
 
         {{ partial "container-footer.html" . }}
-
     </div>
 
 {{ partial "footer.html" . }}
