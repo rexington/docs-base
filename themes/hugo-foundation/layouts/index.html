@@ -1,0 +1,7 @@
+<section id="main">
+  <div>
+    {{ range first 10 .Data.Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
