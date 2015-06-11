@@ -1,17 +1,21 @@
 {{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
-
-    <div class="container">
-        {{ range .Data.Pages }}
-        <section id="smn_{{ .Params.id }}">
-            <h3 class="title">{{ .Title }}</h3>
-            <article>
-                {{ .Content }}
-            </article>
-        </section>
-        {{ end }}
-
-        {{ partial "container-footer.html" . }}
+<div class="row">
+    <div class="large-3 columns">
+        {{ partial "navbar.html" . }}
     </div>
 
+    <div class="large-9 columns">
+        <div class="tabs-content">
+            {{ range .Data.Pages }}
+            <section class="content" id="smn_{{ .Params.id }}">
+                <h3 class="title">{{ .Title }}</h3>
+                <article>
+                    {{ .Content }}
+                </article>
+            </section>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ partial "container-footer.html" . }}
 {{ partial "footer.html" . }}
