@@ -1,57 +1,47 @@
-
-    <!-- uncomment code for absolute positioning tweek see top comment in css -->
-    <!-- <div class="absolute-wrapper"> </div> -->
-    <!-- Menu -->
-    <div class="side-menu">
-    
-    <nav class="navbar navbar-default" role="navigation">
-    
+<nav class="navbar navbar-default" role="navigation">
     <!-- Main Menu -->
-    <div class="side-menu-container">
-        <ul class="tabs vertical" data-tab>
-		  {{ $currentNode := . }}
+        <ul class="tabs first-level">
+          {{ $currentNode := . }}
           {{ range .Site.Menus.main }}
               {{ if .HasChildren }}
                 <!-- Dropdown-->
-                <li class="tab-title{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+                <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
                     <a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} {{ .Name }} <span class="caret" ></span></a>
                     <!-- Dropdown level 1 -->
-                    <ul class="tabs vertical" data-tab>
+                    <ul class="tabs second-level">
                         {{ range .Children }}
                         {{if .HasChildren}} 
-                        	<li class="tab-title{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
-								<a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>	
-								<!-- Dropdown level 2 -->		
-								<ul class="tabs vertical" data-tab>
-								{{ range .Children }}
-								{{if .HasChildren}} 
-									<li class="tab-title{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
-											<a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>	
-											<!-- Dropdown level 3 -->		
-											<ul class="tabs vertical" data-tab>
-													{{ range .Children }}
-														<li class="tab-title{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }}</a></li>
-													{{ end }}
-											</ul>
+                            <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+                                <a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>  
+                                <!-- Dropdown level 2 -->       
+                                <ul class="tabs third-level">
+                                {{ range .Children }}
+                                {{if .HasChildren}} 
+                                    <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+                                            <a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>  
+                                            <!-- Dropdown level 3 -->       
+                                            <ul class="tabs fourth-level">
+                                                    {{ range .Children }}
+                                                        <li class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }}</a></li>
+                                                    {{ end }}
+                                            </ul>
                                     </li>
-								{{else}} 
-									<li class="tab-title{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }} </a></li>
-								{{ end }}
-								{{ end }}
-								</ul>
+                                {{else}} 
+                                    <li class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }} </a></li>
+                                {{ end }}
+                                {{ end }}
+                                </ul>
                             </li>
                         {{else}} 
-                            <li class="tab-title{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }} </a></li>
+                            <li class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }} </a></li>
                         {{ end }}
-            			{{ end }}
+                        {{ end }}
                     </ul>
               {{else}} 
                 <!-- item is not a list -->  
                 <li> <a class="" href="{{ .Url }}">{{ .Pre }}{{ .Name }}</a>
               {{end}} 
             </li> <!-- 1st level item -->
-		  {{end}}
+          {{end}}
         </ul> <!-- 1st level list -->
-        </div><!-- /.navbar-collapse -->
     </nav>
-    </div>
