@@ -13,31 +13,37 @@ theme = "hugo-foundation"
 	name = "Install"
 	identifier = "mn_install"
 	weight = 1
+	url = "/post/"
 [[menu.main]]
 	name = "Docker Engine"
 	identifier = "smn_engine"
 	parent = "mn_install"		
 	weight = 1
+	url = "/post/installation/docker-engine/"
 [[menu.main]]
 	name = "Linux"
 	identifier = "smn_linux"
 	parent = "smn_engine"	
 	weight = 5	
+	url = "/post/"
 [[menu.main]]
 	name = "Cloud"
 	identifier = "smn_cloud"
 	parent = "smn_engine"
 	weight = 99	
+	url = "/post/"
 [[menu.main]]
 	name = "Orchestration tools"
 	identifier = "smn_install_orchestration"
 	parent = "mn_install"	
 	weight = 3
+	url = "/post/"
 [[menu.main]]
 	name = "Kitematic"
 	identifier = "smn_kitematic"
 	parent = "mn_install"		
 	weight = 2	
+	url = "/post/"
 #
 # UNDERSTAND Menu	
 #
@@ -45,11 +51,13 @@ theme = "hugo-foundation"
 	name = "Understand Docker"
 	identifier = "mn_understand"
 	weight = 2
+	url = "/post/"
 [[menu.main]]
 	name = "Learn Docker Fundamentals"
 	identifier = "smn_fundamentals"
 	parent = "mn_understand"
 	weight = 2	
+	url = "/post/"
 #
 # PLATFORM Menu	
 #	
@@ -57,46 +65,55 @@ theme = "hugo-foundation"
 	name = "Docker Platform"
 	identifier = "mn_platform"
 	weight = 3
+	url = "/post/"
 [[menu.main]]
 	name = "Engine on Windows & OSX"
 	identifier = "smn_win_osx"
 	parent = "mn_platform"
 	weight = 2	
+	url = "/post/"
 [[menu.main]]
 	name = "Use Kitematic"
 	identifier = "smn_workw_kitematic"
 	parent = "mn_platform"
 	weight = 3	
+	url = "/post/"
 [[menu.main]]
 	name = "Work with Docker Images"
 	identifier = "smn_images"
 	parent = "mn_platform"
 	weight = 4			
+	url = "/post/"
 [[menu.main]]
 	name = "Automatically Start Containers"
 	identifier = "smn_autostart"
 	parent = "mn_platform"
 	weight = 5		
+	url = "/post/"
 [[menu.main]]
 	name = "Orchestrate Docker"
 	identifier = "smn_workw_orchestrate"
 	parent = "mn_platform"
 	weight = 6	
+	url = "/post/"
 [[menu.main]]
 	name = "Docker Compose"
 	identifier = "smn_workw_compose"
 	parent = "smn_workw_orchestrate"
 	weight = 2	
+	url = "/post/"
 [[menu.main]]
 	name = "Docker Swarm"
 	identifier = "smn_workw_swarm"
 	parent = "smn_workw_orchestrate"
 	weight = 3	
+	url = "/post/"
 [[menu.main]]
 	name = "Applied Docker"
 	identifier = "smn_applied"
 	parent = "mn_platform"
 	weight = 7
+	url = "/post/"
 #
 # HUB Menu	
 #		
@@ -104,21 +121,25 @@ theme = "hugo-foundation"
 	name = "Manage images"
   identifier = "mn_docker_hub"
 	weight = 4
+	url = "/post/"
 [[menu.main]]
 	name = "Docker Hub Enterprise"
 	identifier = "smn_dhe"
 	parent = "mn_docker_hub"
 	weight = 2
+	url = "/post/"
 [[menu.main]]
 	name = "The Public Hub"
 	identifier = "smn_pubhub"
 	parent = "mn_docker_hub"
 	weight = 1	
+	url = "/post/"
 [[menu.main]]
 	name = "Docker Registry"
 	identifier = "smn_registry"
 	parent = "mn_docker_hub"
 	weight = 3		
+	url = "/post/"
 #
 #   Administrate Docker
 #
@@ -126,16 +147,19 @@ theme = "hugo-foundation"
 	name = "Adminstrate Docker"
 	identifier = "mn_administrate"
 	weight = 5			
+	url = "/post/"
 [[menu.main]]
 	name = "Applications and Services"
 	identifier = "smn_apps_servs"
 	parent = "mn_administrate"
 	weight = 1	
+	url = "/post/"
 [[menu.main]]
 	name = "Integrate with Third-party Tools"
 	identifier = "smn_third-party"
 	parent = "mn_administrate"
 	weight = 1	
+	url = "/post/"
 #
 # Command and API Reference
 #		
@@ -143,21 +167,25 @@ theme = "hugo-foundation"
 	name = "Command and API reference"
 	identifier = "mn_reference"
 	weight = 7
+	url = "/post/"
 [[menu.main]]
 	name = "Docker Remote API"
 	identifier = "smn_remoteapi"
 	parent = "mn_reference"
 	weight = 1
+	url = "/post/"
 [[menu.main]]
 	name = "Docker Hub"
 	identifier = "smn_hub"
 	parent = "mn_reference"
 	weight = 2
+	url = "/post/"
 [[menu.main]]
 	name = "Orchestration Tool Reference"
 	identifier = "smn_orchestrate_ref"
 	parent = "mn_reference"
 	weight = 3
+	url = "/post/"
 #
 # Open source at Docker
 #		
@@ -165,16 +193,19 @@ theme = "hugo-foundation"
 	name = "Open Source at Docker"
 	identifier = "mn_opensource"
 	weight = 8
+	url = "/post/"
 [[menu.main]]
 	name = "Configure Development Environment"
 	identifier = "smn_develop"
 	parent = "mn_opensource"
 	weight = 1
+	url = "/post/"
 [[menu.main]]
 	name = "Contribute walkthrough"
 	identifier = "smn_contribute"
 	parent = "mn_opensource"
 	weight = 2
+	url = "/post/"
 #
 # Version
 #		
@@ -182,6 +213,7 @@ theme = "hugo-foundation"
 	name = "Get older docs"
 	identifier = "mn_versions"
 	weight = 9
+	url = "/post/"
 [[menu.main]]
 	name = "Version 1.5"
 	identifier = "smn_fifteen"
@@ -201,3 +233,4 @@ theme = "hugo-foundation"
 	name = "Help"
 	identifier = "mn_help"
 	weight = 10
+	url = "/post/"
