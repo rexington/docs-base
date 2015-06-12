@@ -2,3 +2,38 @@
 	max-width: 100%;
 	width: 100%;
 }
+
+nav ul.tabs{
+	li{
+		list-style: none;
+		position: relative;
+
+		&:hover > ul{
+			display: block;
+			position: absolute;
+			z-index: 1;
+			right: -100%;
+			top: 0;
+			width: 100%;
+		}
+
+		a{
+			background-color: #103f5a;
+			display: block;	
+			line-height: 20px;
+			color: white;
+			padding: 10px 15px;
+			transition: background 300ms ease;
+
+			&:hover{
+				background-color: #242424;
+			}
+		}
+	}	
+
+	&.second-level,
+	&.third-level,
+	&.fourth-level{
+		display: none;
+	}
+}
