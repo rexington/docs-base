@@ -6,25 +6,25 @@
               {{ if .HasChildren }}
                 <!-- Dropdown-->
                 <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
-                    <a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} {{ .Name }} <span class="caret" ></span></a>
+                    <a href="{{ .Url }}">{{ .Pre }} {{ .Name }} <span class="caret" ></span></a>
                     <!-- Dropdown level 1 -->
                     <ul class="tabs second-level">
                         {{ range .Children }}
                         {{if .HasChildren}} 
                             <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
-                                <a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>  
+                                <a href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>  
                                 <!-- Dropdown level 2 -->       
                                 <ul class="tabs third-level">
                                 {{ range .Children }}
                                 {{if .HasChildren}} 
                                     <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
-                                            <a data-toggle="collapse" href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>  
-                                            <!-- Dropdown level 3 -->       
-                                            <ul class="tabs fourth-level">
-                                                    {{ range .Children }}
-                                                        <li class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }}</a></li>
-                                                    {{ end }}
-                                            </ul>
+                                        <a href="{{ .Url }}">{{ .Pre }} </span> {{ .Name }} <span class="caret"></span></a>  
+                                        <!-- Dropdown level 3 -->       
+                                        <ul class="tabs fourth-level">
+                                                {{ range .Children }}
+                                                    <li class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }}</a></li>
+                                                {{ end }}
+                                        </ul>
                                     </li>
                                 {{else}} 
                                     <li class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}"><a href="{{ .Url }}"> {{ .Name }} </a></li>
