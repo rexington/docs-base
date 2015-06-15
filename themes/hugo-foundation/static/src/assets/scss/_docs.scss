@@ -50,15 +50,21 @@ nav ul.tabs{
 	}
 }
 
-.row.content{
-	max-width: 100%;
+.row{
+	&.content{
+		max-width: 100%;
+
+		.large-3{
+			padding-left: 0;
+		}
+	}
 
 	.large-3{
-		padding-left: 0;
+		margin-bottom: 50px;
 	}
 }
 
-@media only screen and (max-width : 767px){
+@media only screen and (max-width : 939px){
 	.large-3{
 		padding-left: 0;
 		padding-right: 0;
