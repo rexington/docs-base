@@ -8,13 +8,18 @@ nav ul.tabs{
 		list-style: none;
 		position: relative;
 
+		& > ul{
+			transition: max-height 0.5s ease-out;
+			max-height: 0px;
+			overflow: hidden;
+			a{
+				background-color: #1e4d68;
+			}			
+		}
+
 		&:hover > ul{
-			display: block;
-			position: absolute;
-			z-index: 1;
-			right: -100%;
-			top: 0;
-			width: 100%;
+			max-height: 500px;
+			transition: max-height 0.6s ease-in;
 		}
 
 		a{
@@ -34,6 +39,14 @@ nav ul.tabs{
 	&.second-level,
 	&.third-level,
 	&.fourth-level{
-		display: none;
+		max-height: 0;
+	}
+}
+
+.row.content{
+	max-width: 100%;
+
+	.large-3{
+		padding-left: 0;
 	}
 }
