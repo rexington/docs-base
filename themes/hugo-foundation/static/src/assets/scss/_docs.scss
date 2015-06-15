@@ -57,3 +57,10 @@ nav ul.tabs{
 		padding-left: 0;
 	}
 }
+
+@media only screen and (max-width : 767px){
+	.large-3{
+		padding-left: 0;
+		padding-right: 0;
+	}	
+}
