@@ -12,9 +12,6 @@ nav ul.tabs{
 			transition: max-height 0.5s ease-out;
 			max-height: 0px;
 			overflow: hidden;
-			a{
-				background-color: #1e4d68;
-			}			
 		}
 
 		&:hover > ul{
@@ -40,6 +37,16 @@ nav ul.tabs{
 	&.third-level,
 	&.fourth-level{
 		max-height: 0;
+	}
+
+	&.second-level a{
+		background-color: #1e4d68;
+	}
+	&.third-level a{
+		background-color: #2b5c78;
+	}
+	&.fourth-level a{
+		background-color: #3f6f8a;
 	}
 }
 
