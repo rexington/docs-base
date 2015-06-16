@@ -8,13 +8,18 @@ nav ul.tabs{
 		list-style: none;
 		position: relative;
 
+		.open-widget{
+			display: inline-block;
+			width: 11px;
+		}
+
 		& > ul{
 			transition: max-height 0.5s ease-out;
 			max-height: 0px;
 			overflow: hidden;
 		}
 
-		&:hover > ul{
+		&.opened > ul{
 			max-height: 500px;
 			transition: max-height 0.6s ease-in;
 		}
